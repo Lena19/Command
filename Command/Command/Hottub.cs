@@ -8,5 +8,13 @@ namespace Command
 {
     class Hottub
     {
+        public void on()
+        {
+            Console.WriteLine("Bubbles are ready");
+        }
+        public void off()
+        {
+            Console.WriteLine("Hottub is off");
+        }
     }
 }

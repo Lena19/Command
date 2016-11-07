@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class GarageDoorUpCommand
+    class GarageDoorUpCommand : Command
     {
+        GarageDoor garagedoor;
+        public GarageDoorUpCommand(GarageDoor garagedoor)
+        {
+            this.garagedoor = garagedoor;
+        }
+        public void execute()
+        {
+            garagedoor.up();
+        }
     }
 }

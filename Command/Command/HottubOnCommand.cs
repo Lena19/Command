@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class HottubOnCommand
+    class HottubOnCommand : Command
     {
+        Hottub hottub;
+        public HottubOnCommand(Hottub hottub)
+        {
+            this.hottub = hottub;
+        }
+        public void execute()
+        {
+            hottub.on();
+        }
     }
 }

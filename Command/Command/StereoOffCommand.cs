@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class StereoOffCommand
+    class StereoOffCommand : Command
     {
+        Stereo stereo;
+        public StereoOffCommand(Stereo stereo)
+        {
+            this.stereo = stereo;
+        }
+        public void execute()
+        {
+            stereo.off();
+        }
     }
 }

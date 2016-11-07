@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class NoCommand
+    class NoCommand : Command
     {
+        public void execute() { }
     }
 }
