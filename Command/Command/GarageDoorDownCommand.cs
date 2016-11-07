@@ -17,5 +17,9 @@ namespace Command
         {
             garagedoor.down();
         }
+        public void undo()
+        {
+            garagedoor.up();
+        }
     }
 }

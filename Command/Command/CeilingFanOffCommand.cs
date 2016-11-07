@@ -17,5 +17,9 @@ namespace Command
         {
             ceilingfan.off();
         }
+        public void undo()
+        {
+            ceilingfan.on();
+        }
     }
 }

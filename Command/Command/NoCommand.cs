@@ -9,5 +9,6 @@ namespace Command
     class NoCommand : Command
     {
         public void execute() { }
+        public void undo() { }
     }
 }

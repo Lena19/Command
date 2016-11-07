@@ -17,5 +17,9 @@ namespace Command
         {
             hottub.on();
         }
+        public void undo()
+        {
+            hottub.off();
+        }
     }
 }

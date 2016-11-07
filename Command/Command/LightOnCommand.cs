@@ -14,9 +14,13 @@ namespace Command
         {
             this.light = light;
         }
-         public void execute()
+        public void execute()
         {
             light.on();
+        }
+        public void undo()
+        {
+            light.off();
         }
     }
 }

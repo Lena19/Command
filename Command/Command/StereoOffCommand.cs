@@ -17,5 +17,9 @@ namespace Command
         {
             stereo.off();
         }
+        public void undo()
+        {
+            stereo.on();
+        }
     }
 }

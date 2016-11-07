@@ -18,5 +18,10 @@ namespace Command
             light.on();
             Console.WriteLine("in the living room");
         }
+        public void undo()
+        {
+            light.off();
+            Console.WriteLine("in the living room");
+        }
     }
 }

@@ -18,5 +18,9 @@ namespace Command
         {
             light.off();
         }
+        public void undo()
+        {
+            light.on();
+        }
     }
 }

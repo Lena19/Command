@@ -10,6 +10,7 @@ namespace Command
     {
         Command[] onCommands;
         Command[] offCommands;
+        Command undoCommand;
 
         public RemoteControl()
         {
@@ -22,6 +23,7 @@ namespace Command
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
+            undoCommand = noCommand;
         }
         public void setCommand(int slot, Command onCommand, Command offCommand)
         {
@@ -31,10 +33,16 @@ namespace Command
         public void onButtonWasPushed(int slot)
         {
             onCommands[slot].execute();
+            undoCommand = onCommands[slot];
         }
         public void offButtonWasPushed(int slot)
         {
             offCommands[slot].execute();
+            undoCommand = offCommands[slot];
+        }
+        public void undoButtonWasPushed()
+        {
+            undoCommand.undo();
         }
         public String toString()
         {
