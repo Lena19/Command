@@ -8,5 +8,13 @@ namespace Command
 {
     class Light
     {
+        public void on()
+        {
+            Console.WriteLine("The light was on");
+        }
+        public void off()
+        {
+            Console.WriteLine("The light was off");
+        }
     }
 }

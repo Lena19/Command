@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class LightOnCommand
+    class LightOnCommand : Command
     {
+        Light light;
+
+        public LightOnCommand(Light light)
+        {
+            this.light = light;
+        }
+         public void execute()
+        {
+            light.on();
+        }
     }
 }

@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class CeilingFanOnCommand
+    class CeilingFanOnCommand : Command
     {
+        CeilingFan ceilingfan;
+        public CeilingFanOnCommand(CeilingFan ceilingfan)
+        {
+            this.ceilingfan = ceilingfan;
+        }
+        public void execute()
+        {
+            ceilingfan.on();
+        }
     }
 }

@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Command
 {
-    class LivingroomLightOffCommand
+    class LivingroomLightOffCommand : Command
     {
+        Light light;
+        public LivingroomLightOffCommand(Light light)
+        {
+            this.light = light;
+        }
+        public void execute()
+        {
+            light.off();
+            Console.WriteLine("in the living room");
+        }
     }
 }
